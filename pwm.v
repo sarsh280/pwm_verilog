@@ -9,12 +9,16 @@ always@(posedge clk) begin
 	else counter <= 0;
 end
 
+// 20% duty cyle
 assign pwm_out[0] = (counter < 20) ? 1:0;
-
+	
+// 40% duty cyle
 assign pwm_out[1] = (counter < 40) ? 1:0;
 
+// 60% duty cyle
 assign pwm_out[2] = (counter < 60) ? 1:0;
 
+// 80% duty cyle
 assign pwm_out[3] = (counter < 80) ? 1:0;
 
 
